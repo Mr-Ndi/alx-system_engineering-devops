@@ -1,2 +1,2 @@
 #!/bin/bash
-cat  /etc/passd /etc/hosts
+cat /etc/passd /etc/hosts
