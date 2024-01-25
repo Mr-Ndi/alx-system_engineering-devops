@@ -1,0 +1,12 @@
+#!/usr/bin/env bash
+# 11. Read and cut a Bash script that displays the content of the file /etc/passwd.
+
+file="/etc/passwd"
+
+if [ -e "$file" ]; then
+	while IFS= read -r line; do
+		echo "$line"
+	done <"$file"
+else
+	echo "file doen't exist"
+fi
