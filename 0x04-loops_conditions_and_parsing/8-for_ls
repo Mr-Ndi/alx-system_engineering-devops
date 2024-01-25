@@ -3,5 +3,12 @@
 
 for f in *
 do
-		echo "$f"
+		if [[ "$f" != .* ]]; then
+			if [[ "$f" == "-" ]]; then
+				new="${f#*-}"
+				echo "$new"
+			else
+				echo "$f"
+			fi
+		fi
 done
