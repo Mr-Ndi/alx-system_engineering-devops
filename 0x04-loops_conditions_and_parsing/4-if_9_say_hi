@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+# a simple script for displaying Sest school 10 times
+for p in {1..10}
+do
+		echo "Best School"
+		if [ "$p" -eq 9 ]; then
+				echo "Hi"
+		fi
+done
