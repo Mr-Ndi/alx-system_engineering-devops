@@ -1,14 +1,15 @@
 #!/usr/bin/env bash
-# For ls
+# Display contents of the current directory in a list format, showing only part after the first dash
 
-for f in *
-do
-		if [[ "$f" != .* ]]; then
-			if [[ "$f" == "-" ]]; then
-				new="${f#*-}"
-				echo "$new"
-			else
-				echo "$f"
-			fi
-		fi
+for file in *; do
+    # Exclude hidden files
+    if [[ "$file" != .* ]]; then
+        # Check if the file name contains a dash
+        if [[ "$file" == *-* ]]; then
+            after_dash="${file#*-}"
+            echo "$after_dash"
+        else
+            echo "$file"
+        fi
+    fi
 done
