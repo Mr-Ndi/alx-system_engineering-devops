@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+# 0. What is my PID  a Bash script that displays its own PID.
+
+ident=$$
+
+echo "$ident"
