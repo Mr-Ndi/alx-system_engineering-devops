@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# 5. Don't stop me now! terminating infinity loop by kill signal
+# 7. Highlander
 
 ident=$(pgrep -f "4-to_infinity_and_beyond")
 
