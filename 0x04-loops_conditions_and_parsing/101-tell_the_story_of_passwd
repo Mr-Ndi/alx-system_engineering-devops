@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+# 101-tell_the_story_of_passwd. THE BALL IS NEVER ACTUALLY THROWN AT ALL
+
+file="/etc/passwd"
+
+if [ -e "$file" ]; then
+	echo "The use is $1"
+fi
