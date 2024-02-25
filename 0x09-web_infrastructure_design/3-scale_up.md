@@ -1,6 +1,8 @@
-![Image](task_3.jpg)
-
 ## Enhancing Web Application Scalability and Security through Component Separation
+
+<p align="center">
+    <img src="task_3.jpg" alt="task_3 architecture">
+</p>
 
 When it comes to "splitting components (web server, application server, database) with their own server," the practice involves segregating different parts of a web application onto distinct servers for reasons such as security, performance, and scalability.
 
