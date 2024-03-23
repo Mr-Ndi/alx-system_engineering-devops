@@ -5,7 +5,7 @@ package { 'python3-pip':
 }
 
 exec { 'install_flask':
-  command => 'pip3 install Flask==2.1.0',
-  path    => '/usr/local/bin', # Specify the path where pip3 is located
-  require => Package['python3-pip'], # Ensure python3-pip is installed first
+  command => '/usr/bin/pip3 install flask==2.1.0 werkzeug==2.1.1',
+  unless  => '/usr/bin/pip3 show flask | grep -q "Version: 2.1.0" && /usr/bin/pip3 show werkzeug | grep -q "Version: 2.1.1"',
+  require => Package['python3-pip'],
 }
