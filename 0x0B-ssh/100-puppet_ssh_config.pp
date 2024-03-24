@@ -1,15 +1,18 @@
 #!/usr/bin/env bash 
 #Client configuration file
-file { '/home/ubuntu/.ssh/config':
-  ensure  => file,
-  content => "
-    Host 162762-web-01
-      HostName 162762-web-01
-      User ubuntu
-      IdentityFile ~/.ssh/school
-      PasswordAuthentication no
-  ",
-  owner   => 'ubuntu',
-  group   => 'ubuntu',
-  mode    => '0600',
+file { '/etc/ssh/ssh_config':
+  ensure  => present'
+  }
+
+file_line { 'turn of password authantication':
+	path  => '/etc/ssh/ssh_config',
+	line  => 'PasswordAuthentication no',
+	match => '^#PasswordAuthentication no',
+}
+
+file_line{ 'declaring an identity file':
+	path  => '/etc/ssh/ssh_config',
+	line  => 'IdentityFile ~/.ssh/school',
+	match => '^IdentityFile',
+
 }
