@@ -1,7 +1,7 @@
 #!/usr/bin/env bash 
 #Client configuration file
 file { '/etc/ssh/ssh_config':
-  ensure  => present'
+  ensure  => present,
   }
 
 file_line { 'turn of password authantication':
