@@ -1,0 +1,15 @@
+#!/usr/bin/env bash
+
+apt-get update
+apt-get install nginx -y
+
+echo "server {
+    listen 80;
+    server_name _;
+    root /var/www/html;
+    location / {
+        return 200 'Hello World!';
+    }
+}" > /etc/nginx/sites-available/default
+
+kill -HUP $(pgrep nginx)
