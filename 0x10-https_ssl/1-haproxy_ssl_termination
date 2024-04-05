@@ -18,14 +18,14 @@ defaults
     timeout server 50000
 
 frontend www-https
-    bind *:443 ssl crt etc/haproxy/ssl/www.mugishab2020.tech.pem
+    bind *:443 ssl crt etc/haproxy/ssl/www.mrndi.tech.pem
     default_backend www-backend
 
 backend www-backend
     redirect scheme https code 301 if !{ ssl_fc }
         balance roundrobin
-        server server1 52.91.134.54:80 check
-        server server2 107.22.142.103:80 check
+        server server1 100.25.29.32:80 check
+        server server2 100.24.205.116:80 check
 
 listen stats
     bind *:8080
