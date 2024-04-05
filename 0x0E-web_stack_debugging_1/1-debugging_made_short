@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+# resetting the config file
+ln -sf /etc/nginx/sites-available/default /etc/nginx/sites-enabled/default
+sudo service nginx start
+kill "$(pgrep 'nginx' | head -1)"
