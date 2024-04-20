@@ -1,0 +1,21 @@
+#!/usr/bin/env bash
+# This script creates a MySQL dump and creates a compressed archive out of it
+# Check if the script was called with a password argument
+if [ -z "$1" ]; then
+    echo "Usage: $0 <mysql_password>"
+    exit 1
+fi
+
+# Set the MySQL connection credentials
+MYSQL_USER="root"
+MYSQL_PASSWORD="$1"
+
+# Set the backup file name and date format
+BACKUP_FILE="backup.sql"
+ARCHIVE_NAME="$(date +%d-%m-%Y).tar.gz"
+
+# Dump the MySQL databases
+sudo mysqldump --user="$MYSQL_USER" --all-databases > "$BACKUP_FILE"
+
+# Compress the backup file
+tar -czf "$ARCHIVE_NAME" "$BACKUP_FILE"
