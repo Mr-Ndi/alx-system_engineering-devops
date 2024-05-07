@@ -1,4 +1,4 @@
-#!/usr/bin/python3
+#!/usr/bin/pythin3
 """
 Answering to How many subs
 """
