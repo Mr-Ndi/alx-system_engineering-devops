@@ -1,12 +1,5 @@
-<<<<<<< HEAD
-#!/usr/bin/pythin3
-"""
-Answering to How many subs
-"""
-=======
 #!/usr/bin/python3
 """Function to query subscribers on a given Reddit subreddit."""
->>>>>>> b1579132c18bc25c86de84ae69c2671723dd7554
 import requests
 
 
