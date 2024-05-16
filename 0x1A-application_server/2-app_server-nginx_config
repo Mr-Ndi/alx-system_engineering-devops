@@ -1,6 +1,6 @@
 server {
     listen 80;
-    server_name 100.25.29.32;
+    server_name 100.25.29.32;  # Replace with your public IP
 
     location /airbnb-onepage/ {
         proxy_pass http://127.0.0.1:5000;
